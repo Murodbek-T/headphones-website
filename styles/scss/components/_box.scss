@@ -1,0 +1,34 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.box {
+  @include mixins.flexbox(space-around, center);
+  margin-top: 100px;
+  margin-bottom: 50px;
+
+  &_right {
+    @include mixins.flexbox(space-around, flex-start);
+    gap: 30px;
+    flex-direction: column;
+    h1 {
+      font-size: 44px;
+      line-height: 57px;
+      max-width: 390px;
+      font-weight: 700;
+    }
+
+    .items {
+      @include mixins.flexbox(space-around, flex-start);
+      gap: 30px;
+      flex-direction: column;
+      p {
+        font-size: 22px;
+        color: rgba(#000000, 0.6);
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}

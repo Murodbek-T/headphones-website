@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Headphones Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- Link fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link stylesheets -->
+    <link rel="stylesheet" href="./styles/css/style.css" />
+    <link rel="icon" href="./icons/logo.svg" />
+  </head>
+  <body>
+    <!-- Heading and Hero section starts here -->
+    <header class="header">
+      <nav class="navbar container">
+        <a href="index.html"
+          ><img src="./icons/logo.svg" alt="" class="logo"
+        /></a>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <img
+          src="./icons/mobileBtn.svg"
+          alt=""
+          class="mobileBtn"
+          onclick="showNav()"
+        />
+        <div class="mobile_navigation">
+          <div class="mobile_navigation_top">
+            <a href="index.html"><img src="./icons/logo.svg" alt="" /></a>
+            <i class="fa-solid fa-xmark fa-2xl" onclick="hideNav()"></i>
+          </div>
+          <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Prices</a></li>
+          </ol>
+        </div>
+      </nav>
+
+      <div class="hero container">
+        <div class="hero_left">
+          <img src="./images/hero-img.png" alt="" />
+        </div>
+
+        <div class="hero_right">
+          <div class="motto">
+            <p>HEAR IT. FEEL IT</p>
+          </div>
+
+          <div class="description">
+            <h1>Move with the music</h1>
+          </div>
+
+          <div class="price">
+            <span class="current">$435</span>
+            <span class="old">$465</span>
+          </div>
+
+          <button class="btn">Buy now</button>
+        </div>
+      </div>
+    </header>
+    <!-- Heading and hero section ends here -->
+
+    <!-- Midline text -->
+    <div class="text container">
+      <h1>Our Latest colour collection 2021</h1>
+    </div>
+    <!-- Midline text -->
+
+    <!-- Products swiper -->
+    <div class="swiper container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./images/slide-img.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./images/slide-img.jpg"
+            alt=""
+            style="filter: hue-rotate(180deg)"
+          />
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="./images/slide-img.jpg"
+            alt=""
+            style="filter: hue-rotate(45deg)"
+          />
+        </div>
+      </div>
+
+      <div
+        class="swiper-button-prev"
+        style="color: black; font-weight: 700"
+      ></div>
+      <div
+        class="swiper-button-next"
+        style="color: black; font-weight: 700"
+      ></div>
+    </div>
+    <!-- Products swiper -->
+
+    <!-- Here starts the advantages part -->
+    <div class="advantages container">
+      <div class="advantages_left">
+        <h1>Good headphones and loud music is all you need</h1>
+        <div class="advantage-wrapper">
+          <i class="fa-solid fa-battery fa-2xl"></i>
+          <div class="explanation">
+            <h2>Battery</h2>
+            <p>Battery 6.2V-AAC codec</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="advantage-wrapper">
+          <i class="fa-brands fa-bluetooth-b fa-2xl"></i>
+          <div class="explanation">
+            <h2>Bluetooth</h2>
+            <p>Battery 6.2V-AAC codec</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="advantage-wrapper">
+          <i class="fa-solid fa-microphone fa-2xl"></i>
+          <div class="explanation">
+            <h2>Microphone</h2>
+            <p>Battery 6.2V-AAC codec</p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="advantages_right">
+        <img src="./images/advantage-img.png" alt="" />
+      </div>
+    </div>
+    <!-- Here I finished advantages -->
+
+    <!-- Here is other midline text -->
+    <div class="text container">
+      <h1>Our Latest Product</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+        facilisis nunc ipsum aliquam, ante.
+      </p>
+    </div>
+    <!-- Here this other text ends -->
+
+    <!-- I'll start latest products here -->
+    <div class="products container">
+      <div class="product">
+        <div class="product_top">
+          <img src="./images/product1.png" alt="" />
+          <div class="cart"><img src="./icons/cart.svg" alt="" /></div>
+        </div>
+        <div class="product_bottom">
+          <div class="product_bottom_stars">
+            <img src="./icons/stars.svg" alt="" />
+            <p>4.50</p>
+          </div>
+          <div class="product_bottom_title">
+            <h2>Pink Headphone</h2>
+            <p>$256</p>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product_top top2">
+          <img src="./images/product2.png" alt="" />
+          <div class="cart"><img src="./icons/cart.svg" alt="" /></div>
+        </div>
+        <div class="product_bottom">
+          <div class="product_bottom_stars">
+            <img src="./icons/stars.svg" alt="" />
+            <p>4.50</p>
+          </div>
+          <div class="product_bottom_title">
+            <h2>Blue Headphone</h2>
+            <p>$235</p>
+          </div>
+        </div>
+      </div>
+      <div class="product">
+        <div class="product_top top3">
+          <img src="./images/product3.png" alt="" />
+          <div class="cart"><img src="./icons/cart.svg" alt="" /></div>
+        </div>
+        <div class="product_bottom">
+          <div class="product_bottom_stars">
+            <img src="./icons/stars.svg" alt="" />
+            <p>4.50</p>
+          </div>
+          <div class="product_bottom_title">
+            <h2>Green Headphone</h2>
+            <p>$245</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- And finish here -->
+
+    <!-- So here is the section about What you'll receive in box -->
+    <div class="box container">
+      <div class="box_left">
+        <img src="./images/get-in-box.png" alt="" />
+      </div>
+
+      <div class="box_right">
+        <h1>Whatever you get in the box</h1>
+        <div class="items">
+          <p><i class="fa-solid fa-arrow-right"></i>5A Charger</p>
+          <p><i class="fa-solid fa-arrow-right"></i>Extra battery</p>
+          <p><i class="fa-solid fa-arrow-right"></i>Sophisticated bag</p>
+          <p><i class="fa-solid fa-arrow-right"></i>User manual guide</p>
+        </div>
+      </div>
+    </div>
+    <!-- So here is the section about What you'll receive in box -->
+
+    <!-- Email section -->
+    <div class="email container">
+      <div class="email_box">
+        <h1>Subscribe</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur</p>
+        <div class="email_wrapper">
+          <input type="text" placeholder="Enter Your email address" />
+        </div>
+        <button class="btn">Subscribe</button>
+      </div>
+    </div>
+    <!-- Email section ends -->
+
+    <!-- Start footer -->
+    <footer>
+      <nav class="footer_nav container">
+        <a href="index.html"><img src="./icons/logo.svg" alt="" /></a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Product</a></li>
+        </ul>
+        <div class="footer_icons">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <!-- Finish footer -->
+
+    <!-- Here is all script codes and Swiper.js script also -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 30,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      function showNav() {
+        const navigation = document.querySelector(".mobile_navigation");
+        navigation.style.display = "block";
+      }
+      function hideNav() {
+        const navigation = document.querySelector(".mobile_navigation");
+        navigation.style.display = "none";
+      }
+    </script>
+    <!-- So ends here :) -->
+  </body>
+</html>

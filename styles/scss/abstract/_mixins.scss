@@ -1,0 +1,36 @@
+@use "./variables" as var;
+
+@mixin icons {
+  width: 47px;
+  height: 47px;
+  background-color: var.$white;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+
+}
+
+@mixin flexbox($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+@mixin circle-icons {
+  width: 69px;
+  height: 69px;
+  border-radius: 50%;
+  border: 3px solid rgba(var.$red, 0.5);
+}
+
+@mixin button {
+  padding: 15px 30px;
+  color: #ff4948;
+  background-color: var.$white;
+  font-weight: bold;
+  font-size: 22px;
+  text-transform: uppercase;
+  border-radius: 62px;
+  cursor: pointer;
+}

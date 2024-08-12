@@ -1,0 +1,112 @@
+@media (width <= 420px) {
+  .header {
+    height: 110vh;
+
+    .navbar {
+      ul {
+        display: none;
+      }
+    }
+  }
+  .hero {
+    text-wrap: nowrap;
+    flex-direction: column;
+    &_left {
+      img {
+        width: 300px;
+      }
+    }
+
+    &_right {
+      width: 300px;
+      align-items: center;
+      .motto {
+        font-size: 14px;
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  .text {
+    h1 {
+      font-size: 35px;
+      line-height: 48px;
+    }
+  }
+
+  .swiper-wrapper {
+    margin-bottom: 100px;
+    .swiper-slide {
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  .advantages {
+    flex-direction: column;
+    gap: 50px;
+
+    &_right {
+      img {
+        width: 300px;
+      }
+    }
+  }
+
+  .products {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .box {
+    flex-direction: column;
+    gap: 50px;
+    &_left {
+      img {
+        width: 350px;
+      }
+    }
+  }
+
+  .email_box {
+    width: 320px;
+    height: 320px;
+
+    h1 {
+      font-size: 30px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .email_wrapper {
+    width: 300px;
+    height: 50px;
+  }
+
+  .footer_nav {
+    justify-content: space-around;
+    ul {
+      a {
+        display: none;
+      }
+    }
+  }
+
+  .footer_icons {
+    li {
+      width: 37px !important;
+      height: 37px !important;
+    }
+  }
+
+  .mobile_navigation {
+    width: 100% !important;
+  }
+}

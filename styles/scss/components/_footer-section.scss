@@ -1,0 +1,56 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+footer {
+  @include mixins.flexbox(center, center);
+  width: 100%;
+  background-color: var.$red;
+  height: 100px;
+}
+
+.footer_nav {
+  @include mixins.flexbox(space-between, center);
+
+  ul {
+    @include mixins.flexbox(space-between, center);
+    gap: 30px;
+    a {
+      font-size: 22px;
+      color: var.$white;
+      font-weight: 500;
+    }
+    a:hover {
+      color: rgba(var.$white, 0.6);
+    }
+    a:active {
+      color: rgba(var.$white, 2);
+    }
+  }
+}
+
+.footer_icons {
+  li {
+    cursor: pointer;
+  }
+
+  li:nth-child(1) {
+    @include mixins.icons;
+    background-image: url("../../icons/instagram.svg");
+  }
+  li:nth-child(2) {
+    @include mixins.icons;
+    background-image: url("../../icons/twitter.svg");
+  }
+  li:nth-child(3) {
+    @include mixins.icons;
+    background-image: url("../../icons/facebook.svg");
+    background-size: 16px;
+  }
+
+  li:hover {
+    filter: brightness(70%);
+  }
+  li:active {
+    filter: brightness(120%);
+  }
+}

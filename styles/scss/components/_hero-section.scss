@@ -1,0 +1,96 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.hero {
+  @include mixins.flexbox(space-between, center);
+  gap: 50px;
+
+  &_left {
+    img {
+      animation-name: changing;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+      animation-direction: alternate;
+    }
+  }
+
+  &_right {
+    text-align: left;
+    width: 650px;
+    @include mixins.flexbox(space-between, flex-start);
+    flex-direction: column;
+    gap: 15px;
+
+    .motto {
+      font-size: 22px;
+      font-weight: 500;
+      color: var.$white;
+      letter-spacing: 4px;
+    }
+
+    .description {
+      font-size: 65px;
+      line-height: 120px;
+      font-weight: 700;
+      color: var.$white;
+      transform: translate(-7px, 0px);
+    }
+
+    .price {
+      @include mixins.flexbox(space-between, center);
+      gap: 40px;
+
+      .current {
+        font-size: 44px;
+        font-weight: 700;
+        color: var.$white;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          border-right: 1px solid white;
+          right: -20px;
+          height: 100%;
+        }
+      }
+
+      .old {
+        font-size: 30px;
+        color: rgba(var.$white, 0.7);
+        text-decoration: line-through;
+      }
+    }
+
+    .btn {
+      @include mixins.button;
+
+      &:hover {
+        filter: brightness(70%);
+      }
+      &:active {
+        filter: brightness(120%);
+      }
+    }
+  }
+}
+
+@keyframes changing {
+  0% {
+    filter: hue-rotate(45deg);
+  }
+  25% {
+    filter: hue-rotate(90deg);
+  }
+  50% {
+    filter: hue-rotate(135deg);
+  }
+  75% {
+    filter: hue-rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(210deg);
+  }
+}

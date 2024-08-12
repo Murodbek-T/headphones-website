@@ -1,0 +1,59 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.header {
+  height: 100vh;
+  background: var.$background;
+
+  .navbar {
+    padding: 20px 0px;
+    @include mixins.flexbox(space-between, center);
+    .logo {
+      width: 73px;
+    }
+    ul {
+      @include mixins.flexbox(space-between, center);
+      gap: 50px;
+
+      li {
+        position: relative;
+        cursor: pointer;
+      }
+
+      
+      li:hover {
+        filter: brightness(70%);
+      }
+
+      li:nth-child(1) {
+        @include mixins.icons;
+        background-image: url("../../icons/magni.svg");
+
+        &::after {
+          content: "";
+          border-right: 1px solid white;
+          position: absolute;
+          height: 100%;
+          right: -25px;
+        }
+      }
+      li:nth-child(2) {
+        @include mixins.icons;
+        background-image: url("../../icons/basket.svg");
+        &::after {
+          content: "";
+          border-right: 1px solid white;
+          position: absolute;
+          height: 100%;
+          right: -25px;
+        }
+      }
+      li:nth-child(3) {
+        @include mixins.icons;
+        background-image: url("../../icons/profile.svg");
+      }
+    }
+  }
+}
+
+  

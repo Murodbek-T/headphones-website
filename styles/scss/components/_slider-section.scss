@@ -1,0 +1,9 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.swiper-wrapper {
+  .swiper-slide {
+    @include mixins.flexbox(center, center);
+    box-shadow: 0 40px 40px gainsboro;
+  }
+}

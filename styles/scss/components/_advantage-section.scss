@@ -1,0 +1,53 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.advantages {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  @include mixins.flexbox(space-around, center);
+
+  &_left {
+    @include mixins.flexbox(space-between, flex-start);
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 35px;
+
+    h1 {
+      max-width: 460px;
+      font-size: var.$heading;
+      line-height: 57px;
+      font-weight: 700;
+    }
+
+    .advantage-wrapper {
+      @include mixins.flexbox(flex-start, center);
+      gap: 30px;
+
+      i {
+        @include mixins.circle-icons;
+        @include mixins.flexbox(center, center);
+        color: var.$red;
+        box-shadow: 0 0px 20px var.$red;
+      }
+    }
+    .explanation {
+      @include mixins.flexbox(flex-start, flex-start);
+      flex-direction: column;
+      gap: 5px;
+
+      h2 {
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      p {
+        color: rgba(var.$heading-color, 0.6);
+      }
+
+      a {
+        font-weight: 500;
+        color: var.$red;
+      }
+    }
+  }
+}

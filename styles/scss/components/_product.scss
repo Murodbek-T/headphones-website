@@ -1,0 +1,130 @@
+@use "../abstract/mixins";
+@use "../abstract/variables" as var;
+
+.products {
+  @include mixins.flexbox(space-between, center);
+  margin-bottom: 50px;
+
+  .product {
+    width: 330px;
+    gap: 30px;
+    @include mixins.flexbox(space-between, flex-start);
+    flex-direction: column;
+
+    .top2 {
+      position: relative;
+      width: 100%;
+      border-radius: 30px;
+
+      .cart {
+        background-color: #e5f1ff;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #e5f1ff;
+        bottom: 0;
+        width: 100%;
+        height: 310px;
+        border-radius: 30px;
+        z-index: -1;
+      }
+    }
+
+    .top3 {
+      position: relative;
+      width: 100%;
+      border-radius: 30px;
+
+      .cart {
+        background-color: #e5fffb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #e5fffb;
+        bottom: 0;
+        width: 100%;
+        height: 310px;
+        border-radius: 30px;
+        z-index: -1;
+      }
+    }
+
+    &_top {
+      width: 100%;
+      @include mixins.flexbox(center, center);
+      position: relative;
+      border-radius: 30px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #ffe5ee;
+        bottom: 0;
+        width: 100%;
+        height: 310px;
+        border-radius: 30px;
+        z-index: -1;
+      }
+
+      .cart {
+        @include mixins.flexbox(center, center);
+        border-radius: 50%;
+        border: 5px solid var.$white;
+        width: 70px;
+        height: 70px;
+        background-color: #ffe5ee;
+        position: absolute;
+        top: 30px;
+        right: -20px;
+        cursor: pointer;
+      }
+
+      .cart:hover {
+        animation-name: shake;
+        animation-duration: 0.2s;
+        animation-timing-function: linear;
+        animation-iteration-count: 1;
+      }
+    }
+
+    &_bottom {
+      width: 100%;
+      &_stars {
+        @include mixins.flexbox(space-between, center);
+        p {
+          font-weight: 500;
+        }
+      }
+
+      &_title {
+        @include mixins.flexbox(space-between, center);
+        margin-top: 15px;
+        h2 {
+          font-weight: 400;
+          font-size: 22px;
+        }
+
+        p {
+          font-weight: 500;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(-25deg);
+  }
+  50% {
+    transform: rotateZ(25deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
